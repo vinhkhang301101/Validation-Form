@@ -1,0 +1,211 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: 'Poppins', sans-serif;
+}
+
+.box {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 650px);
+    grid-gap: 70px;
+    width: 100%;
+    min-height: 100vh;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+    background: #ff3232;
+    background: -webkit-linear-gradient(-135deg, orange, red);
+    background: -o-linear-gradient(-135deg, orange, red);
+    background: -moz-linear-gradient(-135deg, orange, red);
+    background: linear-gradient(-135deg, orange, red);
+}
+
+.sign-up-box {
+    background: #fff;
+    width: 500px;
+    border-radius: 10px;
+    overflow: hidden;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 55px 20px 55px 20px;
+}
+
+.avatar {
+    width: 100px;
+}
+
+form {
+    width: 400px;
+}
+
+form h2 {
+    font-size: 30px;
+    text-transform: uppercase;
+    margin: 15px 0;
+    color: #330000;
+}
+
+.form-message {
+    font-size: 15px;
+    width: 400px;
+    text-align: right;
+}
+
+.form-group {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    margin: 25px 0;
+    padding: 5px 0;
+}
+
+.form-group.invalid .input {
+    background-color: rgb(255, 175, 175);
+    border-color: rgb(255, 62, 62);
+    transition: 0.2s;
+}
+
+.form-group.invalid .form-message {
+    color: rgb(255, 62, 62);
+    transition: 0.2s;
+}
+
+.form-group.username {
+    margin-top: 0px;
+}
+
+.form-group.email {
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+
+.form-group.password {
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+
+.form-group.repass {
+    margin-top: 25px;
+    margin-bottom: 5px;
+}
+
+.icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icons i {
+    color: red;
+    transition: 0.3s;
+}
+
+.form-group.username > div {
+    position: relative;
+    height: 45px;
+}
+
+.form-group.email > div {
+    position: relative;
+    height: 45px;
+}
+
+.form-group.password > div {
+    position: relative;
+    height: 45px;
+}
+
+.form-group.repass > div {
+    position: relative;
+    height: 45px;
+}
+
+.input {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border: 2px solid #d9d9d9;
+    border-radius: 5px;
+    background: none;
+    padding: 0.5rem 0.7rem;
+    font-size: 16px;
+    font-family: 'Poppins', sans-serif;
+    color: #330000;
+}
+
+.input:hover {
+    border-color: orangered;
+    transition: 0.2s;
+}
+
+.signup {
+    display: block;
+    text-decoration: none;
+    color: #999;
+    font-size: 16px;    
+    transition: 0.3s;
+    float: right;
+    margin-top: 10px;
+}
+
+.loginhere {
+    display: block;
+    text-decoration: none;
+    color: #999;
+    font-size: 17px;
+    transition: 0.3s;
+    text-align: center;
+    margin-top: 40px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.loginhere-link {
+    font-weight: bold;
+    font-family: 'Poppins', sans-serif;
+    font-size: 17px;
+    color: rgb(97, 97, 97);
+}
+
+a:hover {
+    color: red;
+}
+
+.signupBTN {
+    display: block;
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    margin: 35px 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    outline: none;
+    border: none;
+    background-image: linear-gradient(to right, red, rgb(161, 0, 0));
+    background-size: 200%;
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #d9d9d9;
+    transition: 0.5s;
+}
+
+.signupBTN:hover {
+    background-position: right;
+}

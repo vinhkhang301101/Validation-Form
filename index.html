@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/png" href="image/icon/favicon.ico"/>
+    <script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="box">
+        <div class="sign-up-box">
+            <form action="signup" method="post" id="signup-form">
+                <img class="avatar" src="image/undraw_male_avatar_323b.png" alt="">
+                <h2><strong>Create Account</strong></h2>
+                <div class="sign-up-input">
+                    <div class="form-group username">
+                        <div class="icons">
+                            <i class="fas fa-user"></i>
+                        </div>
+                        <input type="text" name="username" id="username" class="input" placeholder="Your Username">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-group email">
+                        <div class="icons">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <input type="text" name="email" id="email" class="input" placeholder="Your Email">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-group password">
+                        <div class="icons">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <input type="password" name="password" id="password" class="input" placeholder="Password">
+                        <span class="form-message"></span>
+                    </div>
+                    <div class="form-group repass">
+                        <div class="icons">
+                            <i class="fas fa-lock"></i>
+                        </div>
+                        <input type="password" name="re_pass" id="re_pass" class="input" placeholder="Repeat your password">
+                        <span class="form-message"></span>
+                    </div>
+                </div>
+                <input type="submit" class="signupBTN" value="Sign Up">
+                <p class="loginhere">
+                    Already have an account? <a href="#" class="loginhere-link">Login here</a>
+                </p>
+            </form>
+        </div>
+    </div>
+    <script src="js/validator.js"></script>
+    <script>
+        Validator({
+            form: '#signup-form',
+            formGroup: '.form-group',
+            error: '.form-message',
+            rules: [
+                Validator.isRequired('#username'),
+                Validator.isRequired('#email'),
+                Validator.isEmail('#email'),
+                Validator.minLength('#password', 6),
+                Validator.isRequired('#re_pass'),
+                Validator.isConfirmed('#re_pass', function() {
+                    return document.querySelector('#signup-form #password').value;
+                }, 'Please enter the same password!')
+            ],
+            onSubmit: function(data) {
+                console.log(data);
+            }
+        })
+    </script>
+</body>
+</html>
